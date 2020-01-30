@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}{{article.art_title}}{% endblock %}
+{% block content %}
+<div class="art_main">
+	<a href="{% url 'articles:index' %}" class="back_btn">Back</a>
+	<div class="art_title">
+		{{article.art_title}}
+		<span class="pub_date">{{article.pub_date}}</span>
+	</div>
+	<div class="art_img" style="background-image: url({{article.preview.url}})"></div> 
+	<div class="art_text">{{article.art_text}}</div>
+	<div class="comments_block">
+		<form class="com_form" action="{% url 'articles:leave_comment' article.id %}" method="POST">
+			{% csrf_token %}
+			<input type="text" placeholder="Your name" name="full_name">
+			<textarea class="form_text" placeholder="Your comment" name="text"></textarea>
+			<button type="submit">Leave comment</button>
+		</form>
+		<span class="com_title">Comments for this article</span>
+		<ul class="comments_list">
+			{% if comments_list %}
+				{% for comment in comments_list %}
+					<div class="comment">
+						<div class="com_author">{{comment.author}}</div>
+						<div class="com_text">{{comment.com_text}}</div>
+					</div>
+				{% endfor %}
+			{% else %}
+				<h2>There is no comments for this article.</h2>
+			{% endif %}
+		</ul>
+	</div>
+</div>
+{% endblock %}

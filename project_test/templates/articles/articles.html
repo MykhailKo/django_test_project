@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Latest tech news{% endblock %}
+{% block content %}
+	{% if latest_list %}
+		<div class="articles_wrap">
+		{% for art in latest_list %}
+			<div class="article">
+				<div class="article_title">
+					<li><a href="{% url 'articles:detail' art.id%}">{{art.art_title}}</a></li>
+					<li class="date">{{art.pub_date}}</li> 
+				</div>
+				<div class="article_img" style="background-image: url({{art.preview.url}})"></div>
+			</div>
+		{% endfor %}
+		</div>
+	{% else %}
+		Articles not found
+	{% endif %}
+{% endblock %}

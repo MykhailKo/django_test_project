@@ -1,0 +1,164 @@
+@font-face {
+	font-family: "Halvetica";
+	src: url('../fonts/halvetica.otf');
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+body {
+	font-size: 14px;
+}
+a {
+	color: #202020;
+}
+.articles_wrap {
+	margin-top: 5vh;
+	width: 55vw;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #efefef;
+	display: flex;
+	flex-flow: column wrap;
+	padding: 2vh;
+}
+.article {
+	width: 55vw;
+	padding: 2vh;
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	margin-top: 4vh;
+	font-family: "Halvetica";
+}
+.article_title {
+	display: flex;
+	font-size: 2em;
+	width: 100%;
+	flex-flow: column wrap;
+}
+.article_title > li {
+	list-style: none;
+	display: flex;
+}
+.date {
+	color: #505050;
+	font-size: 0.6em;
+	margin-top: 1vh;
+}
+.article_img {
+	width: 30vw;
+	height: 20vw;
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.art_main {
+	width: 60vw;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2vw;
+	margin-top: 3vh;
+	font-family: "Halvetica";
+	display: flex;
+	flex-flow: column wrap;
+	background-color: #efefef;
+}
+.art_title {
+	font-size: 2em;
+	color: #202020;
+	width: 100%;
+	flex-flow: column wrap;
+}
+.pub_date {
+	display: flex;
+	color: #505050;
+	font-size: 0.6em;
+	margin-top: 1vh;
+}
+.art_img {
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 45vh;
+	margin-top: 2vh;
+}
+.art_text {
+	margin-top: 2.5vh;
+	color: #404040;
+	font-size: 1.1em;
+	line-height: 1.8em;
+}
+.comments_block {
+	border-top: 0.2vh solid #909090;
+	width: 100%;
+	padding: 2vw;
+	margin-top: 2vw;
+	font-family: "Halvetica";
+}
+.com_title {
+	color: #303030;
+	font-size: 1.5em;
+	display: flex;
+}
+.com_form {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	width: 30vw;
+	height: 40vh;
+	margin: 2vh;
+}
+.com_form input {
+	width: 100%;
+	font-size: 1.1em;
+	padding: 1vh;
+	color: #505050;
+	border: 0.1vh solid #303030;
+	outline: none;
+}
+.form_text {
+	margin-top: 1vh;
+	width: 100%;
+	height: 20vh;
+	font-size: 1.1em;
+	padding: 1vh;
+	color: #505050;
+	border: 0.1vh solid #303030;	
+	outline: none;
+}
+.com_form button {
+	margin-top: 1vh;
+	padding: 1vh;
+	background: #303030;
+	color: #efefef;
+	font-size: 1.3em;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+.comments_list {
+	margin-top: 4vh;
+	padding-left: 4vw;
+}
+.comment {
+	max-width: 70%;
+	margin-top: 4vh;
+	padding: 2vh;
+	background-color: gainsboro;
+	border-radius: 1vh;
+	font-family: "Halvetica";
+}
+.com_author {
+	color: #303030;
+	font-size: 1.4em;
+	margin-bottom: 1vh;
+}
+.com_text {
+	padding-left: 2vw;
+	font-size: 1.1em;
+	color: #404040;
+}
